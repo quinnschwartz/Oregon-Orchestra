@@ -22,6 +22,6 @@ export class MusiciansComponent implements OnInit {
   }
 
   goToDetailPage(clickedMusician) {
-    this.router.navigate(['musicians', clickedMusician.$id]);
+    this.router.navigate(['musicians', clickedMusician.$key]);
   };
 }

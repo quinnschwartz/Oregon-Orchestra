@@ -2,7 +2,7 @@
 
 <div *ngFor="let musician of musicians | async">
   <h4 (click)="goToDetailPage(musician)">{{musician.section}}<h4>
-  <!-- <div *ngIf="currentRoute === '/admin'">
+  <div *ngIf="currentRoute === '/admin'">
     {{musician.name}} {{musician.section}} {{musician.instrument}} {{musician.bio}}
-  </div> -->
-<div>
+  </div>
+</div>

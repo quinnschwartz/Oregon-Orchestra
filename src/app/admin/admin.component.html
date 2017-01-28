@@ -1,3 +1,32 @@
-<p>
-  admin works!
-</p>
+<h3>Add New Musician to Orchestra</h3>
+<div>
+  <div>
+    <label>Name:</label>
+    <br>
+    <input #newName>
+  </div>
+
+  <div>
+    <label>Section:</label>
+    <br>
+    <input #newSection>
+  </div>
+
+  <div>
+    <label>Instrument:</label>
+    <br>
+    <input #newInstrument>
+  </div>
+
+  <div>
+    <label>Bio:</label>
+    <br>
+    <textarea #newBio></textarea>
+  </div>
+  <button (click)="submitForm(newName.value, newSection.value, newInstrument.value, newBio.value); newName.value=''; newSection.value=''; newBio.value=''">Add</button>
+</div>
+
+<div>
+  <app-musicians></app-musicians>
+
+</div>
