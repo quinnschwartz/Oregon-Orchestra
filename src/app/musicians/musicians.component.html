@@ -1,5 +1,8 @@
-<p>Musicians</p>
+<h2>Musicians by Section</h2>
 
 <div *ngFor="let musician of musicians | async">
-  <h3>{{musician.section}}<h3>
+  <h4 (click)="goToDetailPage(musician)">{{musician.section}}<h4>
+  <!-- <div *ngIf="currentRoute === '/admin'">
+    {{musician.name}} {{musician.section}} {{musician.instrument}} {{musician.bio}}
+  </div> -->
 <div>

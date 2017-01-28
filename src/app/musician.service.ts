@@ -15,4 +15,8 @@ export class MusicianService {
     return this.musicians;
   }
 
+  getMusicianById(musicianId: string){
+    return this.angularFire.database.object('musicians/' + musicianId);
+  }
+
 }

@@ -21,4 +21,7 @@ export class MusiciansComponent implements OnInit {
     this.musicians = this.musicianService.getMusicians();
   }
 
+  goToDetailPage(clickedMusician) {
+    this.router.navigate(['musicians', clickedMusician.$id]);
+  };
 }
