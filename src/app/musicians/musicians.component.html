@@ -1,3 +1,5 @@
-<p>
-  musicians works!
-</p>
+<p>Musicians</p>
+
+<div *ngFor="let musician of musicians | async">
+  <h3>{{musician.section}}<h3>
+<div>
