@@ -4,5 +4,7 @@
   <h4 (click)="goToDetailPage(musician)">{{musician.section}}<h4>
   <div *ngIf="currentRoute === '/admin'">
     {{musician.name}} {{musician.section}} {{musician.instrument}} {{musician.bio}}
+    <hr>
+    <app-edit-musician [selectedMusician]="musician"></app-edit-musician>
   </div>
 </div>

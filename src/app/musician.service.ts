@@ -24,4 +24,17 @@ export class MusicianService {
     return this.angularFire.database.object('musicians/' + musicianId);
   }
 
+  updateMusician(localUpdatedMusician){
+    var musicianEntryInFirebase = this.getMusicianById(localUpdatedMusician.$key);
+    musicianEntryInFirebase.update({name: localUpdatedMusician.name,
+                                    section: localUpdatedMusician.section,
+                                    instrument: localUpdatedMusician.instrument,
+                                    bio: localUpdatedMusician.bio})
+  }
+
+  deleteMusician(localMusicianToDelete){
+    var musicianEntryInFirebase = this.getMusicianById(localMusicianToDelete.$key);
+    musicianEntryInFirebase.remove();
+  }
+
 }

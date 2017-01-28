@@ -1,3 +1,20 @@
-<p>
-  edit-musician works!
-</p>
+<h4>Edit Musician</h4>
+
+<label>Musician Name:</label>
+<input [(ngModel)]="selectedMusician.name">
+<br>
+
+<label>Musician Section:</label>
+<input [(ngModel)]="selectedMusician.section">
+<br>
+
+<label>Musician Instrument:</label>
+<input [(ngModel)]="selectedMusician.instrument">
+
+<label>Musician Bio:</label>
+<input [(ngModel)]="selectedMusician.bio">
+
+
+<button (click)="beginUpdatingMusician(selectedMusician)">Update</button>
+<hr>
+<button (click)="beginDeletingMusician(selectedMusician)">Delete</button>
