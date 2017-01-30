@@ -1,6 +1,4 @@
 <div>
-  <h3>{{(musicianToDisplay | async)?.name}}</h3>
-  <h3>{{(musicianToDisplay | async)?.section}}</h3>
-  <h3>{{(musicianToDisplay | async)?.instrument}}</h3>
-  <h3>{{(musicianToDisplay | async)?.bio}}</h3>
+  <h3>{{(musicianToDisplay | async)?.name}} ({{(musicianToDisplay | async)?.instrument}})</h3>
+  <p>{{(musicianToDisplay | async)?.bio}}</p>
 </div>

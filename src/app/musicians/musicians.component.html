@@ -1,10 +1,21 @@
-<h2>Musicians by Section</h2>
+<h2>Musicians:</h2>
+<h4>Section:</h4>
+<select (change)="onChange($event.target.value)">
+    <option value="strings" selected="selected">Strings</option>
+    <option value="brass">Brass</option>
+    <option value="woodwinds">Woodwinds</option>
+    <option value="percussion">Percussion</option>
+  </select>
 
-<div *ngFor="let musician of musicians | async">
-  <h3 (click)="goToDetailPage(musician)">{{musician.section}}<h3>
+<div *ngFor="let musician of musicians | async | section:filterBySection">
+  <h3 (click)="goToDetailPage(musician)">{{musician.name}} ({{musician.instrument}})<h3>
+<!-- </div> -->
   <div *ngIf="currentRoute === '/admin'">
-    {{musician.name}} {{musician.section}} {{musician.instrument}} {{musician.bio}}
+    {{musician.name}} ({{musician.instrument}})
+    <br>
+    {{musician.bio}}
     <hr>
     <app-edit-musician [selectedMusician]="musician"></app-edit-musician>
+  </div>
   <!-- </div> -->
-</div>
+<!-- </div> -->

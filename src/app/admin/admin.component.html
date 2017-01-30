@@ -7,15 +7,27 @@
   </div>
 
   <div>
-    <label>Section:</label>
-    <br>
-    <input #newSection>
-  </div>
-
-  <div>
-    <label>Instrument:</label>
-    <br>
-    <input #newInstrument>
+    <select #newInstrument>
+        <option value="clarinet">Clarinet</option>
+        <option value="bassClarinet">Bass Clarinet</option>
+        <option value="flute">Flute</option>
+        <option value="piccolo">Piccolo</option>
+        <option value="oboe">Oboe</option>
+        <option value="bassoon">Bassoon</option>
+        <option value="contrabassoon">Contrabassoon</option>
+        <option value="violin">Violin</option>
+        <option value="viola">Viola</option>
+        <option value="cello">Cello</option>
+        <option value="englishHorn">English Horn</option>
+        <option value="frenchHorn">French Horn</option>
+        <option value="bass">Bass</option>
+        <option value="tuba">Tuba</option>
+        <option value="trombone">Trombone</option>
+        <option value="trumpet">Trumpet</option>
+        <option value="timpani">Timpani</option>
+        <option value="percussion">Percussion</option>
+        <option value="harp">Harp</option>
+    </select>
   </div>
 
   <div>
@@ -23,7 +35,7 @@
     <br>
     <textarea #newBio></textarea>
   </div>
-  <button (click)="submitForm(newName.value, newSection.value, newInstrument.value, newBio.value); newName.value=''; newSection.value=''; newBio.value=''">Add</button>
+  <button (click)="submitForm(newName.value, newInstrument.value, newBio.value); newName.value=''; newBio.value=''">Add</button>
 </div>
 
 <div>

@@ -13,6 +13,8 @@ import { MusiciansComponent } from './musicians/musicians.component';
 import { EditMusicianComponent } from './edit-musician/edit-musician.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { SectionPipe } from './section.pipe';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +32,8 @@ export const firebaseConfig = {
     AdminComponent,
     MusicianDetailComponent,
     MusiciansComponent,
-    EditMusicianComponent
+    EditMusicianComponent,
+    SectionPipe
   ],
   imports: [
     BrowserModule,

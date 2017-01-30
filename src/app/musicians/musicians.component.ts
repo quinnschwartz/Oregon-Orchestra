@@ -16,10 +16,18 @@ export class MusiciansComponent implements OnInit {
   musicians: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  constructor(private router: Router, private musicianService: MusicianService) {}
+  filterBySection: string = 'Strings';
+  
+  constructor(private router: Router, private musicianService: MusicianService) { }
+
 
   ngOnInit() {
     this.musicians = this.musicianService.getMusicians();
+  }
+
+
+  onChange(optionFromMenu) {
+    this.filterBySection = optionFromMenu;
   }
 
   goToDetailPage(clickedMusician) {
