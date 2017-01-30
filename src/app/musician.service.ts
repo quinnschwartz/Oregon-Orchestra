@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Musician } from './musician.model';
-import { MUSICIANS } from './mock-musicians';
+// import { MUSICIANS } from './mock-musicians';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()

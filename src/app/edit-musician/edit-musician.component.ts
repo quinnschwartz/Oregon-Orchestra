@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Musician } from '../musician.model'
 import { MusicianService } from '../musician.service';
 
@@ -12,7 +12,7 @@ import { MusicianService } from '../musician.service';
 export class EditMusicianComponent implements OnInit {
   @Input() selectedMusician;
 
-  constructor(private musicianService: musicianService) { }
+  constructor(private musicianService: MusicianService) { }
 
   ngOnInit() {
   }

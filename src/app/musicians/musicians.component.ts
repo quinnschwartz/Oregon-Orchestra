@@ -10,12 +10,13 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   styleUrls: ['./musicians.component.scss'],
   providers: [MusicianService]
 })
+
 export class MusiciansComponent implements OnInit {
 
   musicians: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  constructor(private router: Router, private musicianService: MusicianService) { }
+  constructor(private router: Router, private musicianService: MusicianService) {}
 
   ngOnInit() {
     this.musicians = this.musicianService.getMusicians();

@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     component: MusiciansComponent
   },
   {
-    path: 'musician/:id',
+    path: 'musicians/:id',
     component: MusicianDetailComponent
   },
   {
