@@ -32,6 +32,14 @@ export class SectionPipe implements PipeTransform {
           }
         }
       return output
+    } else if (desiredSection === "percussion") {
+        for (var i = 0; i < input.length; i++) {
+          if (input[i].instrument === "timpani" || input[i].instrument === "percussion") {
+            output.push(input[i]);
+          }
+        }
+      return output
+
     } else {
       return input;
     }

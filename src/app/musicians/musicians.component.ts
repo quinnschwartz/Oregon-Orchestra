@@ -16,8 +16,8 @@ export class MusiciansComponent implements OnInit {
   musicians: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  filterBySection: string = 'Strings';
-  
+  filterBySection: string = 'All';
+
   constructor(private router: Router, private musicianService: MusicianService) { }
 
 
