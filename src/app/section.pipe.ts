@@ -39,7 +39,6 @@ export class SectionPipe implements PipeTransform {
           }
         }
       return output
-
     } else {
       return input;
     }
