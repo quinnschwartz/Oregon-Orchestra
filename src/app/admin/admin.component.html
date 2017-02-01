@@ -1,4 +1,4 @@
-<h3>Add New Musician to Orchestra:</h3>
+<h3>Add New Musician:</h3>
 <div>
   <div>
     <label>Name:</label>
@@ -37,6 +37,7 @@
   </div>
   <button (click)="submitForm(newName.value, newInstrument.value, newBio.value); newName.value=''; newBio.value=''">Add</button>
 </div>
+<hr>
 
 <div>
   <app-musicians></app-musicians>

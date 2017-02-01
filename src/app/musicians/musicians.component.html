@@ -1,29 +1,27 @@
 <div *ngIf="currentRoute === '/musicians'">
   <h2>Musicians:</h2>
+  <h4>Search Members by Section:</h4>
 
-</div>
-
-
-
-<h4>Section:</h4>
-<select (change)="onChange($event.target.value)">
+  <select (change)="onChange($event.target.value)">
     <option value="all" selected="selected">All</option>
     <option value="strings">Strings</option>
     <option value="brass">Brass</option>
     <option value="woodwinds">Woodwinds</option>
     <option value="percussion">Percussion</option>
   </select>
+</div>
+
+
+
   <div *ngFor="let musician of musicians | async | section:filterBySection">
     <div (click)="goToDetailPage(musician)">
-    <div *ngIf="currentRoute === '/musicians'">
-      <h3 >{{musician.name}} ({{musician.instrument}})<h3>
-    </div>
+      <p>{{musician.name}} ({{musician.instrument}})</p>
 
-  <!-- </div> -->
+
+  </div>
   <div *ngIf="currentRoute === '/admin'">
-    <h3>Edit Musician:</h3>
-    <h3>{{musician.name}} ({{musician.instrument}})</h3>
-    <br>
     <p>{{musician.bio}}</p>
+    <h4>Edit Musician:</h4> 
     <app-edit-musician [selectedMusician]="musician"></app-edit-musician>
   </div>
+</div>
